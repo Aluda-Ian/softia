@@ -23,6 +23,12 @@ class MaintenanceTasks
                 'command' => 'migrate',
                 'parameters' => ['--force' => true],
             ],
+            'seed' => [
+                'label' => 'Load starter content',
+                'description' => 'New site only: adds the product lines, starter products, pages and staff teams. Re-running resets starter product details.',
+                'command' => 'db:seed',
+                'parameters' => ['--force' => true],
+            ],
             'optimize' => [
                 'label' => 'Build caches',
                 'description' => 'Caches config, routes and views for speed. Run after every upload.',

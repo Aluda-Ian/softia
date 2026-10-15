@@ -33,6 +33,7 @@
 </head>
 <body>
 <main>
+    <img src="{{ asset('images/logo-dark.png') }}" alt="Softia" style="height:38px;width:auto;margin-bottom:24px;display:block">
     <h1>Site Maintenance</h1>
     <p class="lead">Run server tasks without a terminal. Keep this link private.</p>
 

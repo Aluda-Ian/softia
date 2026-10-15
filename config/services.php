@@ -35,4 +35,34 @@ return [
         ],
     ],
 
+    /*
+    | Payment & messaging providers. Editable in Admin > System > Settings.
+    */
+
+    'daraja' => [
+        'enabled' => (bool) env('DARAJA_ENABLED', false),
+        'environment' => env('DARAJA_ENV', 'sandbox'),
+        'consumer_key' => env('DARAJA_CONSUMER_KEY'),
+        'consumer_secret' => env('DARAJA_CONSUMER_SECRET'),
+        'shortcode' => env('DARAJA_SHORTCODE'),
+        'transaction_type' => env('DARAJA_TRANSACTION_TYPE', 'CustomerPayBillOnline'),
+        'till_number' => env('DARAJA_TILL_NUMBER'),
+        'passkey' => env('DARAJA_PASSKEY'),
+    ],
+
+    'pesapal' => [
+        'enabled' => (bool) env('PESAPAL_ENABLED', false),
+        'environment' => env('PESAPAL_ENV', 'sandbox'),
+        'consumer_key' => env('PESAPAL_CONSUMER_KEY'),
+        'consumer_secret' => env('PESAPAL_CONSUMER_SECRET'),
+        'ipn_id' => env('PESAPAL_IPN_ID'),
+    ],
+
+    'africastalking' => [
+        'environment' => env('AT_ENV', 'sandbox'),
+        'username' => env('AT_USERNAME', 'sandbox'),
+        'api_key' => env('AT_API_KEY'),
+        'sender_id' => env('AT_SENDER_ID'),
+    ],
+
 ];

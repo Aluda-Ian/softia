@@ -48,7 +48,7 @@ class DeployController extends Controller
             'password' => ['required', 'confirmed', Password::min(12)],
         ]);
 
-        User::forceCreate($validated + ['is_admin' => true]);
+        User::forceCreate($validated + ['is_admin' => true, 'is_super_admin' => true]);
 
         return back()->with('result', [
             'task' => 'admin',
